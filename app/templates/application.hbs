@@ -1,3 +1,12 @@
-<h2 id="title">Welcome to Ember</h2>
+<header class = "jumbotron">
+  <h1>Hiking Blog (remember to make a better title later)</h1>
+</header>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
+
+<footer>
+  {{#link-to 'index'}}Home{{/link-to}}
+  {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}
+</footer>

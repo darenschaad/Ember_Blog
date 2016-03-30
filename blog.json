@@ -1,0 +1,15 @@
+{
+  "posts": [{
+    "title": "Hiking in New York",
+    "date": "3/30/16",
+    "body": "It kinda sucks",
+    "author": "Matt Rosanio",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Gothics_from_Big_Slide.jpg"
+  }, {
+    "title": "Hiking Table Mountain in the Columbia River Gorge",
+    "date": "3/24/16",
+    "body": "It's a tough hike, but the views are worth it",
+    "author": "Daren Schaad",
+    "image": "http://guy.smugmug.com/Outdoors-Hikes-Climbs-etc/Columbia-River-Gorge-Hikes/Table-Mountain-150405/i-kKkG6gG/0/L/DSC03529-L.jpg"
+    }]
+}
