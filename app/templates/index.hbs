@@ -1,5 +1,7 @@
-<ul>
+<div class="postList">
   {{#each model as |post|}}
     {{post-tile post=post}}
   {{/each}}
-</ul>
+</div>
+
+{{new-post save='save'}}

@@ -1,0 +1,23 @@
+{{#if newPostForm}}
+<form class="newPost">
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id='title'}}
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    {{input value=author id='author'}}
+  </div>
+  <div class="form-group">
+    <label for="body">Blog Content</label>
+    {{textarea value=body id='body'}}
+  </div>
+  <div class="form-group">
+    <label for="image">Image URL</label>
+    {{input value=image id='image'}}
+  </div>
+  <button class="btn btn-primary" {{action 'save'}}>Blog!</button>
+</form>
+{{else}}
+<button {{action 'createPost'}}>Create Post</button>
+{{/if}}

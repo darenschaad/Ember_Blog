@@ -4,3 +4,29 @@ footer a {
 footer {
   margin-left: 7%;
 }
+.postContainer {
+  text-align: center;
+  display: inline-block;
+  width: 75vh;
+}
+.postContainer p {
+  text-align: left;
+}
+.postContainer a {
+  color: black;
+}
+.postContainer a:hover {
+  text-decoration: none;
+}
+.postContainer img {
+  margin: 0 auto;
+  display: block;
+  max-width: 75vh;
+  max-height: 75vh;
+}
+.jumbotron {
+  text-align: center;
+}
+.postList {
+  text-align: center;
+}
