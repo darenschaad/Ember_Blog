@@ -1,6 +1,6 @@
 <div class="postContainer">
   <h2>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h2>
-  <h4>{{post.author}}</h4>
+  <h4>{{post.author.name}}</h4>
   {{#link-to 'post' post.id}}
     <img src={{post.image}} alt={{post.title}} />
     <p>{{shortBody post.body}}</p>

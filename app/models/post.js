@@ -5,6 +5,6 @@ export default DS.Model.extend({
   date: DS.attr(),
   orderDate: DS.attr(),
   body: DS.attr(),
-  author: DS.attr(),
+  author: DS.belongsTo('user', { async: true }),
   image: DS.attr()
 });

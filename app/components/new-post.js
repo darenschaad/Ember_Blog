@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     createPost() {
       this.set('newPostForm', true);
     },
-    save() {
+    save(author) {
       var date = new Date();
       var orderDate = -date.getTime();
       console.log(orderDate);
@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       var momentDateAndTime = moment(dateAndTime).format('MM/DD/YYYY hh:mm:ss a');
       var params = {
         title: this.get('title'),
-        author: this.get('author'),
+        author: author,
         date: momentDateAndTime,
         orderDate: orderDate,
         body: this.get('body'),
