@@ -6,4 +6,8 @@
   <p class="blogDate">{{post.date}}</p>
 </div>
 
+<br>
+
 <button class="btn btn-danger" {{action 'delete' post}}>Delete Blog</button>
+
+{{edit-post post=post edit="edit"}}

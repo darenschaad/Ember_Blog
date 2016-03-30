@@ -1,16 +1,14 @@
 import Ember from 'ember';
-import moment from 'moment';
 
 export default Ember.Component.extend({
-  newPostForm: false,
+  showEditForm: false,
   actions: {
-    createPost() {
-      this.set('newPostForm', true);
+    editPost() {
+      this.set('showEditForm', true);
     },
-    save() {
+    edit(post) {
       var date = new Date();
       var orderDate = -date.getTime();
-      console.log(orderDate);
       var time = date.toString().substring(16, 24);
       date = date.toString().substring(4, 15);
       var dateAndTime = date + ' ' + time;
@@ -23,12 +21,13 @@ export default Ember.Component.extend({
         body: this.get('body'),
         image: this.get('image'),
       };
-      this.set('newPostForm', false);
+      console.log(params);
+      this.set('showEditForm', false);
       this.set('title', '');
       this.set('author', '');
       this.set('body', '');
       this.set('image', '');
-      this.sendAction('save', params);
+      this.sendAction('edit', post, params);
     }
   }
 });
