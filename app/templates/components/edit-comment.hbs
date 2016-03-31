@@ -1,0 +1,11 @@
+{{#if showEditCommentForm}}
+  <form class="editComment">
+    <div class="form-group">
+      <label for="body">Comment</label>
+      {{input value=body id='body' value=comment.body}}
+    </div>
+    <button class="btn btn-primary" {{action 'edit' post}}>Edit Comment!</button>
+  </form>
+{{else}}
+  <button class="btn btn-info btn-xs" {{action 'editComment'}}>Edit Comment!</button>
+{{/if}}

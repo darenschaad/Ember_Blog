@@ -29,6 +29,15 @@ export default Ember.Route.extend({
       post.save();
       this.refresh();
     },
+    editComment(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined && params[key] !== "") {
+          comment.set(key, params[key]);
+        }
+      });
+      comment.save();
+      this.refresh();
+    },
     deleteComment(comment) {
       if (confirm("Are you sure you want to delete this comment?")) {
         comment.destroyRecord();
