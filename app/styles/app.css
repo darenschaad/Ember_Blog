@@ -28,10 +28,41 @@ nav {
   display: block;
   max-width: 75vh;
   max-height: 75vh;
+  min-width: 50vh;
+  min-height: 50vh;
 }
 .jumbotron {
   text-align: center;
 }
 .postList {
   text-align: center;
+}
+.lightGrey {
+  color: grey;
+  opacity: .7;
+  font-size: 83%;
+  margin-left: 20px;
+
+}
+
+.dash {
+  color: grey;
+  opacity: .8;
+  font-size: 83%;
+  margin-left: 15px;
+}
+
+.comments {
+  border: 1px solid #cccccc;
+  padding: 2%;
+}
+
+.users {
+  font-size: 145%;
+}
+
+.profilePic img {
+  display: block;
+  max-width: auto;
+  height: 400px;
 }

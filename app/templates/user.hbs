@@ -1,11 +1,29 @@
 <h2>{{model.name}}</h2>
 
-<img src={{model.pic}}>
+<div class="profilePic">
+
+  <img src={{model.pic}}>
+</div>
 
 {{new-post author=model save='save'}}
 
-{{#each model.posts as |post|}}
-  <h3>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h3>
-  {{edit-post post=post edit="edit"}}
-  <button class="btn btn-danger" {{action 'delete' post}}>Delete Post</button>
-{{/each}}
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Posts</h2>
+    {{#each model.posts as |post|}}
+      <h3>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h3>
+      {{edit-post post=post edit="edit"}}
+      <button class="btn btn-danger" {{action 'delete' post}}>Delete Post</button>
+    {{/each}}
+  </div>
+  <div class="col-xs-6">
+    <h2>Comments</h2>
+    {{#each model.comments as |comment|}}
+    {{log comment.post}}
+      <div>
+        {{model.name}} says {{comment.body}} on {{comment.post.title}}
+        <button class="btn btn-danger btn-xs" {{action 'deleteComment' comment}}>Delete Comment</button>
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,9 +1,9 @@
 {{post-detail post=model.post}}
 
 {{comment-tile users=model.users post=model.post saveComment="saveComment"}}
-
+<h4>Comments:</h4>
 {{#each model.post.comments as |comment|}}
 <div>
-  {{comment.body}}
+  {{display-comment comment=comment}}
 </div>
 {{/each}}

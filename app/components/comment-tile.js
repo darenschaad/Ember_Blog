@@ -14,15 +14,17 @@ export default Ember.Component.extend({
       date = date.toString().substring(4, 15);
       var dateAndTime = date + ' ' + time;
       var momentDateAndTime = moment(dateAndTime).format('MM/DD/YYYY hh:mm:ss a');
-      var params = {
-        user: this.get('user'),
-        date: momentDateAndTime,
-        orderDate: orderDate,
-        body: this.get('body'),
-        post: post
-      };
-      this.set('showingCommentForm', false);
-      this.sendAction('saveComment', params);
+      if(this.get('body') !== undefined) {
+        var params = {
+          user: this.get('user'),
+          date: momentDateAndTime,
+          orderDate: orderDate,
+          body: this.get('body'),
+          post: post
+        };
+        this.set('showingCommentForm', false);
+        this.sendAction('saveComment', params);
+      }
     }
   }
 });
