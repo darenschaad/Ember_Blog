@@ -1,1 +1,9 @@
-{{post-detail post=model destroyPost='destroyPost' edit='edit'}}
+{{post-detail post=model.post}}
+
+{{comment-tile users=model.users post=model.post saveComment="saveComment"}}
+
+{{#each model.post.comments as |comment|}}
+<div>
+  {{comment.body}}
+</div>
+{{/each}}

@@ -5,7 +5,7 @@
 {{new-post author=model save='save'}}
 
 {{#each model.posts as |post|}}
-  <h3>{{post.title}}</h3>
+  <h3>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h3>
   {{edit-post post=post edit="edit"}}
   <button class="btn btn-danger" {{action 'delete' post}}>Delete Post</button>
 {{/each}}

@@ -1,0 +1,22 @@
+{{#if showingCommentForm}}
+
+  <p>text</p>
+  <form>
+    <div class="form-group">
+      <label for="user">Select a User...</label>
+      {{#x-select value=user}}
+        {{#each users as |user|}}
+          {{#x-option value=user}}{{user.name}}{{/x-option}}
+        {{/each}}
+      {{/x-select}}
+    </div>
+    <div class="form-group">
+      <label for="body">Comment</label>
+      {{textarea value=body}}
+    </div>
+    <button class="btn btn-primary" {{action 'saveComment' post}}>Go!</button>
+  </form>
+
+{{else}}
+  <button {{action 'showCommentForm'}}>Leave a Comment</button>
+{{/if}}

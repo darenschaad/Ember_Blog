@@ -6,5 +6,6 @@ export default DS.Model.extend({
   orderDate: DS.attr(),
   body: DS.attr(),
   author: DS.belongsTo('user', { async: true }),
-  image: DS.attr()
+  image: DS.attr(),
+  comments: DS.hasMany('comment', { async: true })
 });

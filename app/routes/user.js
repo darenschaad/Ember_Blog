@@ -13,6 +13,21 @@ export default Ember.Route.extend({
         return user.save();
       });
       this.transitionTo('index');
+    },
+    delete(post) {
+      if (confirm('Are you sure you want to delete this blog post?')) {
+        post.destroyRecord();
+        this.refresh();
+      }
+    },
+    edit(post, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined && params[key] !== "") {
+          post.set(key, params[key]);
+        }
+      });
+      post.save();
+      this.refresh();
     }
   }
 });
