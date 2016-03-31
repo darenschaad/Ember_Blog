@@ -21,7 +21,8 @@
     {{#each model.comments as |comment|}}
     {{log comment.post}}
       <div>
-        {{model.name}} says {{comment.body}} on {{comment.post}}test: {{comment.user}}
+        {{model.name}} says {{comment.body}}
+        <!-- on {{comment.post.title}}test: {{comment.user}} -->
         {{edit-comment editComment='editComment' comment=comment}}
         <button class="btn btn-danger btn-xs" {{action 'deleteComment' comment}}>Delete Comment</button>
       </div>

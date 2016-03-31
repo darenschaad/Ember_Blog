@@ -1,1 +1,16 @@
-{{yield}}
+<div class="recentComments">
+  <h3>Recent Comments</h3>
+  <div class="recentDisplayBlock">
+
+    {{#each comments as |comment|}}
+    {{#link-to 'post' comment.post.id}}
+    <div class="recentContainer">
+      <span class="center"><h5>{{comment.user.name}}</h5></span>
+      <span class= "lightGrey">{{comment.date}}</span>
+      <p class="center">{{comment.post.title}}</p>
+      <p class="left">{{comment.body}} </p>
+    </div>
+    {{/link-to}}
+    {{/each}}
+  </div>
+</div>

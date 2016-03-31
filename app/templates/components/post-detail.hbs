@@ -1,6 +1,11 @@
+<div class="postContainer">
 
-<h2>{{post.title}}</h2>
-<h4>{{#link-to 'user' post.author.id}}{{post.author.name}}{{/link-to}}</h4>
-<img src={{post.image}} alt={{post.title}} />
-<p>{{post.body}}</p>
-<p class="blogDate">{{post.date}}</p>
+  <h2>{{post.title}}</h2>
+  <h4>{{#link-to 'user' post.author.id}}{{post.author.name}}{{/link-to}}</h4>
+  <img src={{post.image}} alt={{post.title}} />
+  <div class="paddingTop">
+    
+    <p>{{post.body}}</p>
+    <p class="blogDate">{{post.date}}</p>
+  </div>
+</div>

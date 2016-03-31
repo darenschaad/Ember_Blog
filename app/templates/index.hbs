@@ -1,7 +1,13 @@
-<div class="postList">
-  {{#each model as |post|}}
-    {{post-tile post=post}}
-  {{/each}}
-</div>
+<div class="content">
 
-{{new-post save='save'}}
+  {{recent-comments comments=model.comments}}
+
+  <div class="postList">
+    {{#each model.posts as |post|}}
+      {{post-tile post=post}}
+    {{/each}}
+  </div>
+  {{log model.comments}}
+
+
+</div>
